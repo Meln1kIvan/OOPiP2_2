@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPF App" Height="450" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10">
+            <Button Content="Open File" Click="OpenFile_Click"/>
+            <Button Content="FileStream Save" Click="BtnFileStream_Click"/>
+            <Button Content="BufferStream Save" Click="BtnBufferStream_Click"/>
+            <Button Content="MemoryStream Save" Click="BtnMemoryStream_Click"/>
+        </StackPanel>
+        <TextBox x:Name="txtInput" Grid.Row="1" Grid.Column="0" Margin="10" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" />
+        <TextBox x:Name="txtOutput" Grid.Row="1" Grid.Column="1" Margin="10" VerticalScrollBarVisibility="Auto" IsReadOnly="True" TextWrapping="Wrap" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Window>
